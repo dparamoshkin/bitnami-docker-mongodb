@@ -1,4 +1,5 @@
-FROM debian:stable
+FROM ubuntu:latest
+#debian:stable
 LABEL maintainer "Sad guy"
 
 ENV HOME="/" \
