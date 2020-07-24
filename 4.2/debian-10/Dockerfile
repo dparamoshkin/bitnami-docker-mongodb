@@ -1,8 +1,8 @@
-FROM docker.io/bitnami/minideb:buster
-LABEL maintainer "Bitnami <containers@bitnami.com>"
+FROM debian:stable
+LABEL maintainer "Sad guy"
 
 ENV HOME="/" \
-    OS_ARCH="amd64" \
+    OS_ARCH="ppc64el" \
     OS_FLAVOUR="debian-10" \
     OS_NAME="linux"
 
