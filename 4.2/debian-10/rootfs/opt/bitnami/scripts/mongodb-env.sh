@@ -54,7 +54,7 @@ done
 unset mongodb_env_vars
 
 # Paths
-export PATH="/usr/bin/mongo:/opt/bitnami/common/bin:$PATH"
+export PATH="/opt/bitnami/mongodb/bin:/opt/bitnami/common/bin:$PATH"
 export MONGODB_VOLUME_DIR="/bitnami"
 export MONGODB_BASE_DIR="/usr/bin/mongo"
 export MONGODB_CONF_DIR="$MONGODB_BASE_DIR/conf"
