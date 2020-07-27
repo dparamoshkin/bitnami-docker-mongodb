@@ -255,6 +255,7 @@ mongodb_start_bg() {
         info "Msg 2.4"
     else
        info "Msg 2.5"
+       info "$MONGODB_BIN_DIR/mongod"
        debug_execute "$MONGODB_BIN_DIR/mongod" "${flags[@]}"
        info "Msg 2.6"
     fi
