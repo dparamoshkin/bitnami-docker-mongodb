@@ -6,6 +6,7 @@
 CACHE_ROOT="/tmp/bitnami/pkg/cache"
 DOWNLOAD_URL="https://downloads.bitnami.com/files/stacksmith"
 
+#https://downloads.bitnami.com/files/stacksmith/render-template-1.0.0-1-linux-ppc64le-debian-10.tar.gz
 # Functions
 
 ########################
