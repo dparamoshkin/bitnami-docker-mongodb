@@ -997,9 +997,13 @@ mongodb_initialize() {
     if is_dir_empty "$MONGODB_DATA_DIR/db"; then
         info "Deploying MongoDB from scratch..."
         ensure_dir_exists "$MONGODB_DATA_DIR/db"
+        info "Msg 1"
+
         am_i_root && chown -R "$MONGODB_DAEMON_USER" "$MONGODB_DATA_DIR/db"
+        info "Msg 2"
 
         mongodb_start_bg
+        info "Msg 3"
         mongodb_create_users
         if [[ -n "$MONGODB_REPLICA_SET_MODE" ]]; then
             if [[ -n "$MONGODB_REPLICA_SET_KEY" ]]; then
