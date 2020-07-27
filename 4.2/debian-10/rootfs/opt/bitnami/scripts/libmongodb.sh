@@ -244,14 +244,19 @@ mongodb_start_bg() {
     local flags=("--fork" "--config=$conf_file")
     [[ -z "${MONGODB_EXTRA_FLAGS:-}" ]] || flags+=(${MONGODB_EXTRA_FLAGS})
 
-    debug "Starting MongoDB in background..."
-
+    info "Starting MongoDB in background..."
+    info "Msg 2.1"
     is_mongodb_running && return
+    info "Msg 2.2"
 
     if am_i_root; then
+        info "Msg 2.3"
         debug_execute gosu "$MONGODB_DAEMON_USER" "$MONGODB_BIN_DIR/mongod" "${flags[@]}"
+        info "Msg 2.4
     else
+       info "Msg 2.5"
        debug_execute "$MONGODB_BIN_DIR/mongod" "${flags[@]}"
+       info "Msg 2.6"
     fi
 
     # wait until the server is up and answering queries
