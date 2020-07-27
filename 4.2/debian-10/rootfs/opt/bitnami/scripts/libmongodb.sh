@@ -252,7 +252,7 @@ mongodb_start_bg() {
     if am_i_root; then
         info "Msg 2.3"
         debug_execute gosu "$MONGODB_DAEMON_USER" "$MONGODB_BIN_DIR/mongod" "${flags[@]}"
-        info "Msg 2.4
+        info "Msg 2.4"
     else
        info "Msg 2.5"
        debug_execute "$MONGODB_BIN_DIR/mongod" "${flags[@]}"
